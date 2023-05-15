@@ -1,7 +1,7 @@
 import React from 'react'
 
 export interface TextFieldProps {
-  placeholder: string
+  placeholder?: string
 }
 
 const TextField = (props: TextFieldProps) => {
