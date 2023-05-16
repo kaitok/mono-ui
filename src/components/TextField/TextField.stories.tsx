@@ -12,6 +12,7 @@ type Story = StoryObj<typeof TextField>
 export const Primary: Story = {
   args: {
     placeholder: 'Name',
+    width: '100px',
     borderRadius: '0px',
     darkMode: false,
   },
