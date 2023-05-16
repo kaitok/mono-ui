@@ -1,11 +1,22 @@
 import React from 'react'
+import './TextField.css'
 
 export interface TextFieldProps {
   placeholder?: string
+  darkMode?: boolean
+  borderRadius?: string
 }
 
 const TextField = (props: TextFieldProps) => {
-  return <input type="text" placeholder={props.placeholder}></input>
+  const style = {
+    background: props.darkMode ? '#000' : '#fff',
+    color: props.darkMode ? '#fff' : '#000',
+    borderRadius: props.borderRadius || '0px',
+    padding: '10px',
+  }
+  return (
+    <input type="text" style={style} placeholder={props.placeholder}></input>
+  )
 }
 
 export default TextField
