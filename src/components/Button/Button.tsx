@@ -11,11 +11,11 @@ export interface ButtonProps {
 
 const Button = (props: ButtonProps) => {
   const style = {
+    background: props.darkMode ? '#000' : '#fff',
+    color: props.darkMode ? '#fff' : '#000',
     width: props.width,
     borderRadius: props.borderRadius || '0px',
     padding: props.padding || '8px 20px',
-    background: props.darkMode ? '#fff' : '#000',
-    color: props.darkMode ? '#000' : '#fff',
   }
 
   return <button style={style}>{props.label}</button>
