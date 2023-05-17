@@ -1,9 +1,13 @@
 .color-scheme--light {
   --button-bg: #000;
   --button-color: #fff;
+  --input-bg: #000;
+  --input-color: #fff;
 }
 
 .color-scheme--dark {
   --button-bg: #fff;
   --button-color: #000;
+  --input-bg: #fff;
+  --input-color: #000;
 }

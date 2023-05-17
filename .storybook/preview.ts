@@ -1,5 +1,6 @@
 import type { Preview } from "@storybook/react";
 import "../src/color-scheme.css";
+import { withColorScheme } from '../src/colorScheme'
 
 const preview: Preview = {
   parameters: {
@@ -42,6 +43,7 @@ const preview: Preview = {
       },
     },
   },
+  decorators: [withColorScheme]
 };
 
 
