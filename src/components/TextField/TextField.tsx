@@ -10,8 +10,6 @@ export interface TextFieldProps {
 
 const TextField = (props: TextFieldProps) => {
   const style = {
-    background: props.darkMode ? '#000' : '#fff',
-    color: props.darkMode ? '#fff' : '#000',
     width: props.width,
     borderRadius: props.borderRadius || '0px',
     padding: '10px',
