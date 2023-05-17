@@ -1,0 +1,9 @@
+.color-scheme--light {
+  --button-bg: #000;
+  --button-color: #fff;
+}
+
+.color-scheme--dark {
+  --button-bg: #fff;
+  --button-color: #000;
+}
