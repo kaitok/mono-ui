@@ -4,30 +4,29 @@ import logo from '../public/static/logo.svg'
 export const customTheme = create({
   base: 'light',
   brandTitle: 'My custom Storybook',
-  // brandUrl: 'https://example.com',
   brandImage: logo,
   brandTarget: '_self',
-  colorPrimary: '#3A10E5',
-  colorSecondary: '#585C6D',
+  colorPrimary: '#000',
+  colorSecondary: '#222222',
 
   // UI
   appBg: '#ffffff',
   appContentBg: '#ffffff',
-  appBorderColor: '#ddd',
+  appBorderColor: '#F5F5F5',
   appBorderRadius: 4,
 
   // Text colors
-  textColor: '#10162F',
+  textColor: '#000',
   textInverseColor: '#ffffff',
 
   // Toolbar default and active colors
-  barTextColor: '#9E9E9E',
-  barSelectedColor: '#585C6D',
+  barTextColor: '#000',
+  barSelectedColor: '#000',
   barBg: '#ffffff',
 
   // Form colors
   inputBg: '#ffffff',
-  inputBorder: '#ddd',
-  inputTextColor: '#10162F',
+  inputBorder: '#F5F5F5',
+  inputTextColor: '#000',
   inputBorderRadius: 2,
 });
