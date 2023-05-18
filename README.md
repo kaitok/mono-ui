@@ -2,10 +2,10 @@
    <img src="./public/static/logo.svg" alt="mono-ui" width="300" />
 </p>
 
-<h1 align="center">Minimalistic monochrome React component library</h1>
+<h1 align="center">Minimalistic React components</h1>
 <br />
 
-mono-ui is a monochrome-themed, readable, and simple React component library. It is designed with a monochromatic UI as the foundation, allowing for various expressions while maintaining extensibility.
+**mono-ui** is a monochrome-themed, readable, and simple React component library. It is designed with a monochromatic UI as the foundation, allowing for various expressions while maintaining extensibility.
 
 <p>Under Development</p>
 
