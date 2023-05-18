@@ -1,14 +1,11 @@
-type Theme = {}
-// export const monoTheme:Theme = ""
-export const monoDarkTheme:Theme = ""
-
 import { create } from '@storybook/theming/create';
+import logo from '../public/static/logo.svg'
 
 export const customTheme = create({
   base: 'light',
   brandTitle: 'My custom Storybook',
   // brandUrl: 'https://example.com',
-  brandImage: 'https://storybook.js.org/images/placeholders/350x150.png',
+  brandImage: logo,
   brandTarget: '_self',
   colorPrimary: '#3A10E5',
   colorSecondary: '#585C6D',
