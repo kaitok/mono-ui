@@ -1,6 +1,4 @@
-import type { StoryObj } from '@storybook/react'
-
-export function withColorScheme(Story: StoryObj, context) {
+export function withColorScheme(Story: React.ComponentType, context: any) {
   let { theme } = context.globals
   const colorSchemeClass = `color-scheme--${theme}`
 
