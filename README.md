@@ -1,5 +1,5 @@
 <p align="center">
-   <img src="./public/static/logo.svg" alt="mono-ui" width="300" />
+   <img src="https://raw.githubusercontent.com/kaitok/mono-ui/main/public/static/logo.svg" alt="mono-ui" width="300" />
 </p>
 
 <h1 align="center">Minimalistic React components</h1>
