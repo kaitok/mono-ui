@@ -1,3 +1,5 @@
+import '../../global-style.css'
+
 export interface TextFieldProps {
   label?: string
 }
