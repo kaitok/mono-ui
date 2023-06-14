@@ -5,9 +5,9 @@ const ThemeContext = createContext({
   toggleTheme: () => {},
 })
 
-export const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState('light')
-
+const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
+  const initTheme = 'light'
+  const [theme, setTheme] = useState(initTheme)
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'))
   }
@@ -24,5 +24,4 @@ export const ThemeProvider = ({ children }) => {
   )
 }
 
-export default ThemeProvider
-export { ThemeContext }
+export { ThemeProvider, ThemeContext }
