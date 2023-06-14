@@ -1,16 +1,21 @@
 'use client'
-import { useContext } from 'react'
-import { Button } from 'mono-ui'
-import { ThemeContext, ThemeProvider } from 'mono-ui'
+import React, { useContext } from 'react'
+import { Button } from '@kaitok/mono-ui'
+// import { ThemeContext } from './ThemeProviderLocal'
+import { ThemeContext } from '@kaitok/mono-ui'
 
 export default function Home() {
-  // const { theme, toggleTheme } = useContext(ThemeContext)
+  const { theme, toggleTheme } = useContext(ThemeContext)
+  const handleClick = () => {
+    toggleTheme()
+  }
   return (
     <div>
-      <ThemeProvider>
-        <Button label="button" width="200px" />
-        Home
-      </ThemeProvider>
+      <Button label={'button'} width={'200px'} />
+      theme: {theme}
+      <br />
+      <button onClick={handleClick}>Toggle Theme</button>
+      <br />
     </div>
   )
 }
