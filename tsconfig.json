@@ -25,8 +25,9 @@
 
     /* Completeness */
     "skipLibCheck": true,
+
+    /* vitest */
+    "types": ["vite/client", "vitest"]
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src"]
 }
