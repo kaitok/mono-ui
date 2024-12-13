@@ -1,52 +1,65 @@
 import '../../global-style.css'
 import './Pagination.css'
-export interface TextFieldProps {
+
+export type PaginationProps = {
   pageLimit: number
   url: string
   lastPageNumber: number
   paramKey: string
 }
 
-const TextField = (props: TextFieldProps) => {
+const Pagination = ({
+  pageLimit,
+  url,
+  lastPageNumber,
+  paramKey,
+}: PaginationProps) => {
+  // generatePageLinks
+  const generatePageLinks = () => {
+    const links = []
+
+    // page link
+    for (let i = 1; i <= pageLimit; i++) {
+      links.push(
+        <li key={i} className="pagination-item">
+          <a href={`${url}?${paramKey}=${i}`} aria-label={`Page ${i}`}>
+            {i}
+          </a>
+        </li>
+      )
+    }
+
+    // ...
+    if (lastPageNumber - pageLimit > 1) {
+      links.push(
+        <li key="ellipsis" className="pagination-ellipsis" aria-hidden="true">
+          ...
+        </li>
+      )
+    }
+
+    // last page link
+    if (lastPageNumber > pageLimit) {
+      links.push(
+        <li key="last" className="pagination-item">
+          <a
+            href={`${url}?${paramKey}=${lastPageNumber}`}
+            aria-label={`Page ${lastPageNumber}`}
+          >
+            Last
+          </a>
+        </li>
+      )
+    }
+
+    return links
+  }
+
   return (
-    <>
-      <ul>
-        {(function () {
-          const list = []
-          for (let i = 1; i <= props.pageLimit; i++) {
-            list.push(
-              <li>
-                <a href={props.url + '?' + props.paramKey + '=' + i}>{i}</a>
-              </li>
-            )
-          }
-          if (props.lastPageNumber - props.pageLimit > 1) {
-            list.push(<li>...</li>)
-          }
-
-          if (props.lastPageNumber > props.pageLimit) {
-            list.push(
-              <li>
-                <a
-                  href={
-                    props.url +
-                    '?' +
-                    props.paramKey +
-                    '=' +
-                    props.lastPageNumber
-                  }
-                >
-                  Last
-                </a>
-              </li>
-            )
-          }
-
-          return <ul>{list}</ul>
-        })()}
-      </ul>
-    </>
+    <nav aria-label="Pagination Navigation">
+      <ul className="pagination-list">{generatePageLinks()}</ul>
+    </nav>
   )
 }
 
-export default TextField
+export default Pagination

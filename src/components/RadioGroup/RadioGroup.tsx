@@ -1,6 +1,6 @@
 import '../../global-style.css'
 
-export interface TextFieldProps {
+export type TextFieldProps = {
   label?: string
 }
 

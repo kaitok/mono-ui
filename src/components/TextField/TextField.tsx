@@ -1,9 +1,9 @@
 import '../../global-style.css'
 import './TextField.css'
 
-export interface TextFieldProps {
-  placeholder?: string
+export type TextFieldProps = {
   width: string
+  placeholder?: string
   darkMode?: boolean
   borderRadius?: string
 }
