@@ -1,7 +1,7 @@
 import '../../global-style.css'
 import './Button.css'
 
-export interface ButtonProps {
+export type ButtonProps = {
   label: string
   width: string
   borderRadius?: string
@@ -15,7 +15,11 @@ const Button = (props: ButtonProps) => {
     padding: props.padding || '8px 20px',
   }
 
-  return <button style={style}>{props.label}</button>
+  return (
+    <button type="button" style={style}>
+      {props.label}
+    </button>
+  )
 }
 
 export default Button
